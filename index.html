@@ -53,7 +53,8 @@
                 document.location = "https://id.twitch.tv/oauth2/authorize?" +
                     "client_id=" + CLIENT_ID + 
                     "&redirect_uri=https://tsoding.org/kgbotka-login" +
-                    "&response_type=token";
+                    "&response_type=token" +
+                    "&scope=chat:read+chat:edit+channel:moderate+whispers:read+whispers:edit+channel_editor";
             }
 
             function access_token(success, fail) {
