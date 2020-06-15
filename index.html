@@ -4,16 +4,23 @@
         <title>KGBotka Twitch OAuth Tool</title>
     </head>
     <body>
-        <div id="credentials-error" style="display:none;color:red"></div>
+        <div id="notify-box"></div>
         <div id="credentials-section" style="display:none">
             <textarea id="credentials" rows=10 cols=80></textarea>
         </div>
         <input id="login-button" type="submit" onclick="login()" value="Login" />
         <script>
+            // TODO: link to GitHub repo
             // TODO: customizable client_id
             var CLIENT_ID = "war5yuqeql96esijz8kt07gahg2rro";
 
             function id(x) { return x }
+
+            function notify(html, color) {
+                var notifyBox = document.querySelector("#notify-box");
+                notifyBox.style.color = color || "black";
+                notifyBox.innerHTML = html;
+            }
 
             function validate(token, success, fail) {
                 success = success || id;
@@ -73,8 +80,12 @@
             }
 
             access_token(function (token) {
+                notify("Validating credentials...")
                 validate(token, 
                     function(user) {
+                        notify("Here are your credentials. Copy paste them to your " +
+                            "<a href='https://github.com/tsoding/kgbotka#secretjson' target='_blank'>" +
+                            "secret.json</a> file.");
                         document.querySelector("#credentials-section").style.display = "block";
                         document.querySelector("#credentials").value = 
                             "\"twitch\": {\n" +
@@ -84,10 +95,8 @@
                             "}";
                     },
                     function(err) {
+                        notify("Error validating the credentials. Refresh and try again.", "red");
                         console.error(err);
-                        var credentialsError = document.querySelector("#credentials-error");
-                        credentialsError.style.display = 'block';
-                        credentialsError.innerText = "Error validating the credentials. Refresh and try again.";
                     });
             });
         </script>
