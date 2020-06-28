@@ -1,4 +1,3 @@
-// TODO: link to GitHub repo
 // TODO: customizable client_id
 var CLIENT_ID = "war5yuqeql96esijz8kt07gahg2rro";
 
