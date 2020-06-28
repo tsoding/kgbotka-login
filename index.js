@@ -51,6 +51,11 @@ function login() {
         "&scope=chat:read+chat:edit+channel:moderate+whispers:read+whispers:edit+channel_editor";
 }
 
+function advanced() {
+    document.getElementById("advanced-box").style.display = "none";
+    document.getElementById("client-id-box").style.display = "block";
+}
+
 function access_token(success, fail) {
     success = success || id;
     fail = fail || id;
@@ -73,7 +78,7 @@ access_token(function (token) {
             notify("Here are your credentials. Copy paste them to your " +
                 "<a href='https://github.com/tsoding/kgbotka#secretjson' target='_blank'>" +
                 "secret.json</a> file.");
-            document.querySelector("#credentials-section").style.display = "block";
+            document.querySelector("#credentials-box").style.display = "block";
             document.querySelector("#credentials").value =
                 "\"twitch\": {\n" +
                 "    \"account\" : \"" + user + "\",\n" +

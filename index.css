@@ -12,13 +12,10 @@ body {
     font-family: 'Cantarell', sans-serif;
 }
 
-textarea {
-    background: #282828;
-    border: none;
-    color: #e4e4ef;
-    padding: 0.5em;
-    margin-bottom: 0.5em;
-    font-family: 'Monospace';
+a {
+    color: #73c936;
+    text-decoration: none;
+    border-bottom: 0.01em solid;
 }
 
 .center-box {
@@ -30,8 +27,17 @@ textarea {
     color: #ff4f58;
 }
 
-#notify-box {
+
+textarea {
+    border: none;
+    background: #282828;
+    color: #e4e4ef;
+    padding: 0.5em;
     margin-bottom: 0.5em;
+    font-family: 'Monospace';
+}
+
+#login-box {
 }
 
 #login-button {
@@ -44,8 +50,30 @@ textarea {
     font-family: 'Cantarell', sans-serif;
 }
 
-a {
-    color: #73c936;
-    text-decoration: none;
-    border-bottom: 1px solid;
+#advanced-box {
+    padding: 0.60em;
+    font-size: 12pt;
+}
+
+#client-id-box {
+    display: none;
+}
+
+#client-id {
+    border: 0px;
+    background: #282828;
+    color: #e4e4ef;
+    padding: 0.5em;
+    font-family: 'Monospace';
+    font-size: 12pt;
+    width: 30em;
+    text-align: center;
+}
+
+.box {
+    margin-bottom: 0.5em;
+}
+
+#credentials-box {
+    display: none;
 }
