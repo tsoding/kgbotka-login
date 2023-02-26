@@ -1,5 +1,5 @@
 // TODO: customizable client_id
-var CLIENT_ID = "war5yuqeql96esijz8kt07gahg2rro";
+var CLIENT_ID = "8nh3lpfttelwy93c32g2qcu6uhld5u";
 
 function id(x) { return x; }
 
