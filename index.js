@@ -1,5 +1,6 @@
-// TODO: customizable client_id
+// TODO: customizable client_id and redirect_uri
 var CLIENT_ID = "8nh3lpfttelwy93c32g2qcu6uhld5u";
+var REDIRECT_URI = "https://tsoding.github.io/kgbotka-login/";
 
 function id(x) { return x; }
 
@@ -46,7 +47,7 @@ function validate(token, success, fail) {
 function login() {
     document.location = "https://id.twitch.tv/oauth2/authorize?" +
         "client_id=" + CLIENT_ID +
-        "&redirect_uri=https://tsoding.org/kgbotka-login" +
+        "&redirect_uri=" + REDIRECT_URI +
         "&response_type=token" +
         "&scope=chat:read+chat:edit+channel:moderate+whispers:read+whispers:edit+channel_editor";
 }
