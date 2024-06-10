@@ -49,7 +49,7 @@ function login() {
         "client_id=" + CLIENT_ID +
         "&redirect_uri=" + REDIRECT_URI +
         "&response_type=token" +
-        "&scope=chat:read+chat:edit+channel:moderate+whispers:read+whispers:edit+channel_editor";
+        "&scope=chat:read+chat:edit+channel:moderate+whispers:read+whispers:edit+channel_editor+moderator:read:followers";
 }
 
 function access_token(success, fail) {
